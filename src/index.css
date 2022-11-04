@@ -11,6 +11,7 @@ body {
 
 .nav-bar {
   display: flex;
+  justify-content: center;
   border: 2px solid blue;
   background-color: black;
   padding: 8px 0 8px 8px;
@@ -19,7 +20,7 @@ body {
 }
 
 .nav-link {
-  margin: 15px 0 15px 30px;
+  margin: 15px 0 15px 10px;
   border: 2px solid #fff;
   border-radius: 3px;
   border: none;
