@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   /* border: 2px solid blue; */
-  background-color: black;
+  background-color: #92b4f3;
   padding: 8px 0 8px 8px;
   min-width: 50vw;
   font-size: 20px;
