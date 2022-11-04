@@ -144,4 +144,9 @@ p {
   border-radius: 3px;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.boundary-test-btn:hover {
+  transform: scale(1.2);
 }
