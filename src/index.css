@@ -131,7 +131,7 @@ p {
   font-size: 20px;
 }
 
-.error-bound-test > button {
+.error-bound-test-btn {
   background: red;
   color: #fff;
 }
