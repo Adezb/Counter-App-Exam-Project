@@ -10,7 +10,7 @@ const CounterTwo = () => {
         <title>Counter Two</title>
         <meta
           name="description"
-          content="This counter counts from 1 to 10 in Positive + and Negative -"
+          content="This counter is controlled by useReducer counter hook."
         />
       </Helmet>
 

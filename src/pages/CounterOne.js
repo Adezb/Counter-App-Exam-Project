@@ -12,7 +12,7 @@ const CounterOne = () => {
         <title>Counter One</title>
         <meta
           name="description"
-          content="This counter counts from 1 to 10 in Positive + and Negative -"
+          content="This counter is controlled by MyCounter Custom Hook."
         />
       </Helmet>
 
