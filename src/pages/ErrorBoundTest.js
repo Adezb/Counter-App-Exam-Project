@@ -1,7 +1,7 @@
 import MyCounter from "../customhook/MyCounter";
 
 const ErrorBoundTest = () => {
-  const { count, increment } = MyCounter(0);
+  const { count, increment } = MyCounter();
   if (count >= 2) {
     throw new Error();
   } else {
