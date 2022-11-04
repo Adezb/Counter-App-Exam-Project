@@ -6,9 +6,11 @@ const ErrorBoundTest = () => {
   const handleClick = () => setBomb(bomb);
 
   return (
-    <div className="error-bound-test">
+    <div className="boundary-test">
       <p>Click the button below to test Error Boundary</p> <br />
-      <button onClick={handleClick}>Error Boundary Test</button>
+      <button className="boundary-test-btn" onClick={handleClick}>
+        Error Boundary Test
+      </button>
     </div>
   );
 };
