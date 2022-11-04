@@ -1,16 +1,20 @@
-const ErrorBoundTest = () => {
-  function handleClick() {
-    throw new Error("GBOOLA!!!");
-  }
+import MyCounter from "../customhook/MyCounter";
 
-  return (
-    <div className="boundary-test">
-      <p>Click the button below to test Error Boundary</p> <br />
-      <button className="boundary-test-btn" onClick={handleClick}>
-        Error Boundary Test
-      </button>
-    </div>
-  );
+const ErrorBoundTest = () => {
+  const { count, increment } = MyCounter(0);
+  if (count >= 2) {
+    throw new Error();
+  } else {
+    return (
+      <div className="boundary-test">
+        <p>Click the button twice to test Error Boundary</p> <br />
+        <div>{count}</div>
+        <button className="boundary-test-btn" onClick={increment}>
+          Error Boundary Test
+        </button>
+      </div>
+    );
+  }
 };
 
 export default ErrorBoundTest;
