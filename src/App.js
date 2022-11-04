@@ -14,10 +14,10 @@ function NavBar() {
   return (
     <nav className="nav-bar">
       <MyNavLink to="/" className="nav-link">
-        Counter One
+        Counter 1
       </MyNavLink>
       <MyNavLink to="/countertwo" className="nav-link">
-        Counter Two
+        Counter 2
       </MyNavLink>
       <MyNavLink to="/errorboundtest" className="nav-link">
         ErrorTest
