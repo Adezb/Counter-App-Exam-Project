@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
@@ -9,7 +10,10 @@ const ErrorPage = () => {
         <meta name="description" content="This is an error page" />
       </Helmet>
       <h2>404 Error</h2>
-      <p>Click the Reset button to reset counter.</p>
+      <p>
+        Go back to <Link to="/">Counter One</Link> or{" "}
+        <Link to="/countertwo">Counter Two</Link>
+      </p>
     </div>
   );
 };

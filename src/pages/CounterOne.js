@@ -1,6 +1,7 @@
 import React from "react";
 import MyCounter from "../customhook/MyCounter";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const CounterOne = () => {
   const { count, increment, decrement, setValue, reset } = MyCounter(0);
@@ -14,6 +15,10 @@ const CounterOne = () => {
           content="This counter counts from 1 to 10 in Positive + and Negative -"
         />
       </Helmet>
+
+      <div className="error-link">
+        Go to <Link to="/error">Error 404 Page</Link>
+      </div>
 
       <div className="counter-wrapper">
         <div className="counter-title">Counter One</div>

@@ -20,7 +20,7 @@ function NavBar() {
         Counter Two
       </MyNavLink>
       <MyNavLink to="/errorboundtest" className="nav-link">
-        ErrorBound
+        ErrorTest
       </MyNavLink>
     </nav>
   );
