@@ -24,6 +24,7 @@
   transition: 0.4s;
 }
 
-.counter-btn:hover {
-  background: #0c6ae4;
+.counter-one-btn:hover {
+  background: #9cb7f3;
+  color: #03092e;
 }
