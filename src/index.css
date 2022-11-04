@@ -125,13 +125,13 @@ p {
   text-align: center;
 }
 
-.error-bound-test {
+.boundary-test {
   text-align: center;
   margin-top: 100px;
   font-size: 20px;
 }
 
-button {
+.boundary-test-btn {
   max-width: 50vw;
   background: red;
   color: #fff;
