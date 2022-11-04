@@ -88,12 +88,12 @@ body {
   padding: 5px;
   width: 15vw;
   font-size: 16px;
-  background: rgba(147, 233, 183, 0.21);
+  background: rgba(119, 178, 233, 0.21);
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10.5px);
   -webkit-backdrop-filter: blur(10.5px);
-  border: 1px solid rgba(20, 158, 78, 0.35);
+  border: 1px solid rgba(20, 75, 158, 0.35);
   color: #fff;
   /* border: none;
   border-radius: 5px; */
@@ -102,8 +102,8 @@ body {
 }
 
 .reset-btn:hover {
-  background: #0ff340;
-  color: rgb(116, 113, 109);
+  background: #0f57f3;
+  color: rgb(255, 255, 255);
   transform: scale(1.2);
 }
 
