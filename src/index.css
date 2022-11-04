@@ -12,7 +12,7 @@ body {
 .nav-bar {
   display: flex;
   justify-content: center;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   background-color: black;
   padding: 8px 0 8px 8px;
   min-width: 50vw;
