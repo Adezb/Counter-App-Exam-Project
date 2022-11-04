@@ -126,6 +126,10 @@ h2 {
   margin-top: 15rem;
 }
 
+Link {
+  text-decoration: none;
+}
+
 p {
   text-align: center;
 }
