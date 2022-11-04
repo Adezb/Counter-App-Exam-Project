@@ -8,7 +8,7 @@ const ErrorBoundTest = () => {
     return (
       <div className="boundary-test">
         <p>Click the button twice to test Error Boundary</p> <br />
-        <div>{count}</div>
+        <div className="count-boundary">{count}</div>
         <button className="boundary-test-btn" onClick={increment}>
           Error Boundary Test
         </button>

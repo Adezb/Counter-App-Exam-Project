@@ -132,6 +132,10 @@ p {
   font-weight: 600;
 }
 
+.count-boundary {
+  display: none;
+}
+
 .boundary-test-btn {
   max-width: 50vw;
   background: red;
