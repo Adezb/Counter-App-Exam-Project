@@ -15,6 +15,7 @@ body {
   border: 2px solid blue;
   background-color: black;
   padding: 8px 0 8px 8px;
+  min-width: 50vw;
   font-size: 20px;
 }
 
@@ -32,7 +33,7 @@ body {
   position: absolute;
   margin-bottom: 170px;
   font-family: "Roboto", sans-serif;
-  width: 30vw;
+  width: 60vw;
   background: rgba(20, 41, 158, 0.21);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
