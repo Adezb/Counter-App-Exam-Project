@@ -1,9 +1,7 @@
-import { useState } from "react";
-
 const ErrorBoundTest = () => {
-  const [bomb, setBomb] = useState("error bomb");
-
-  const handleClick = () => setBomb(bomb);
+  function handleClick() {
+    throw new Error("GBOOLA!!!");
+  }
 
   return (
     <div className="boundary-test">
