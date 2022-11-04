@@ -1,5 +1,6 @@
 import UseReducerCounter from "../components/UseReducerCounter";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const CounterTwo = () => {
   const { count, increment, decrement, setValue, reset } = UseReducerCounter(0);
