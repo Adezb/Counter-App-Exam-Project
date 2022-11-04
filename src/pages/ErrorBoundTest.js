@@ -6,7 +6,7 @@ const ErrorBoundTest = () => {
   const handleClick = () => setBomb(bomb);
 
   return (
-    <div>
+    <div className="error-bound-test">
       <p>Click the button below to test Error Boundary</p> <br />
       <button onClick={handleClick}>Error Boundary Test</button>
     </div>
