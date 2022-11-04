@@ -72,12 +72,12 @@ body {
 
 .counter-btn-wrapper {
   display: flex;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .reset-value {
   position: absolute;
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
 }
 
 .reset-btn {
