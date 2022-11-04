@@ -127,4 +127,11 @@ p {
 
 .error-bound-test {
   text-align: center;
+  margin-top: 40rem;
+  font-size: 20px;
+}
+
+.error-bound-test > button {
+  background: red;
+  color: #fff;
 }
