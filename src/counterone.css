@@ -1,0 +1,24 @@
+.wrapper-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #08145a;
+}
+
+.counter-one-btn {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: #3b7acc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.counter-btn:hover {
+  background: #0c6ae4;
+}

@@ -1,0 +1,25 @@
+.wrapper-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #2e48e0;
+}
+
+.counter-two-btn {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: #03092e;
+  color: #a3a3a3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.counter-two-btn:hover {
+  background: #9cb7f3;
+  color: #03092e;
+}
