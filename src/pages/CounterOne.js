@@ -17,8 +17,12 @@ const CounterOne = () => {
       </Helmet>
 
       <div className="error-link">
-        <Link to="/error">404 Page</Link>{" "}
-        <Link to="/errorboundtest">Error Boundary</Link>
+        <Link to="/error" className="link">
+          404 Page
+        </Link>{" "}
+        <Link to="/errorboundtest" className="link">
+          Error Boundary
+        </Link>
       </div>
       <div className="wrapper-one">
         <div className="counter-wrapper">
