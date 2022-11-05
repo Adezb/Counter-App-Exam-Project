@@ -20,8 +20,9 @@ body {
 
 .app-name {
   margin-top: 15px;
-  margin-left: 5px;
-  color: #fff;
+  margin-left: 8px;
+  background: #fff;
+  color: #92b4f3;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
 }

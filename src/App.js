@@ -1,10 +1,16 @@
 import { Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 
-import CounterOne from "./pages/CounterOne";
-import CounterTwo from "./pages/CounterTwo";
-import ErrorPage from "./pages/ErrorPage";
-import ErrorBoundTest from "./pages/ErrorBoundTest";
+import {
+  CounterOne,
+  CounterTwo,
+  ErrorBoundTest,
+  ErrorPage,
+} from "./pages/index";
+// import CounterOne from "./pages/CounterOne";
+// import CounterTwo from "./pages/CounterTwo";
+// import ErrorPage from "./pages/ErrorPage";
+// import ErrorBoundTest from "./pages/ErrorBoundTest";
 import MyNavLink from "./customhook/MyNavLink";
 import Fallback from "./components/Fallback";
 import "./counterone.css";
@@ -13,7 +19,7 @@ import "./countertwo.css";
 function NavBar() {
   return (
     <nav className="nav-bar">
-      <div className="app-name"> COUNTER 20</div>
+      <div className="app-name">COUNTER 20</div>
       <MyNavLink to="/" className="nav-link">
         Counter 1
       </MyNavLink>
