@@ -27,7 +27,10 @@ const CounterOne = () => {
       <div className="wrapper-one">
         <div className="counter-wrapper">
           <div className="counter-title">Counter One</div>
-          <p className="counter-description">Custom Hook Counter</p>
+          <p className="counter-description">
+            Custom Hook Counter
+            <div>Count Range: 0 - 20</div>
+          </p>
           <div className="counter-box">{count}</div>
         </div>
 
