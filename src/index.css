@@ -12,7 +12,6 @@ body {
 .nav-bar {
   display: flex;
   justify-content: center;
-  /* border: 2px solid blue; */
   background-color: #92b4f3;
   padding: 8px 0 8px 8px;
   min-width: 50vw;
@@ -102,8 +101,6 @@ body {
   -webkit-backdrop-filter: blur(10.5px);
   border: 1px solid rgba(20, 75, 158, 0.35);
   color: #fff;
-  /* border: none;
-  border-radius: 5px; */
   cursor: pointer;
   transition: 0.4s;
 }

@@ -8,7 +8,7 @@ function reducer(counter = 0, action) {
   } else if (action.type === "reset") {
     return 0;
   } else if (action.type === "setvalue") {
-    return 5;
+    return Math.floor(Math.random() * 21);
   } else {
     return counter;
   }

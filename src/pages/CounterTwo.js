@@ -25,6 +25,10 @@ const CounterTwo = () => {
       </div>
 
       <div className="wrapper-two">
+        <p className="app-description">
+          Counter 20 App counts in Positive + or Negative - ranging from 0 to
+          20.
+        </p>
         <div className="counter-wrapper">
           <div className="counter-title">Counter Two </div>
           <p className="counter-description">UseReducer Counter</p>
@@ -34,8 +38,8 @@ const CounterTwo = () => {
 
         <div className="counter-btn-wrapper">
           <button
-            disabled={count >= 10}
-            arial-disabled={count >= 10}
+            disabled={count >= 20}
+            arial-disabled={count >= 20}
             className="counter-two-btn"
             onClick={increment}
           >
@@ -45,8 +49,8 @@ const CounterTwo = () => {
             Set Value
           </button>
           <button
-            disabled={count <= -10}
-            arial-disabled={count <= -10}
+            disabled={count <= -20}
+            arial-disabled={count <= -20}
             className="counter-two-btn"
             onClick={decrement}
           >

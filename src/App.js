@@ -13,7 +13,7 @@ import "./countertwo.css";
 function NavBar() {
   return (
     <nav className="nav-bar">
-      <div className="app-name"> COUNTER 10</div>
+      <div className="app-name"> COUNTER 20</div>
       <MyNavLink to="/" className="nav-link">
         Counter 1
       </MyNavLink>
