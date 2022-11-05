@@ -48,10 +48,6 @@ body {
   border: 1px solid rgba(20, 41, 158, 0.35);
 }
 
-.app-description {
-  margin-bottom: 30rem;
-}
-
 .counter-title {
   display: flex;
   align-items: center;

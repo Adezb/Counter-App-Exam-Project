@@ -24,11 +24,11 @@ const CounterTwo = () => {
         </Link>
       </div>
 
+      <p className="app-description">
+        Counter 20 App counts in Positive + or Negative - ranging from 0 to 20.
+      </p>
+
       <div className="wrapper-two">
-        <p className="app-description">
-          Counter 20 App counts in Positive + or Negative - ranging from 0 to
-          20.
-        </p>
         <div className="counter-wrapper">
           <div className="counter-title">Counter Two </div>
           <p className="counter-description">UseReducer Counter</p>
