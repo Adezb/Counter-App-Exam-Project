@@ -19,9 +19,9 @@ function NavBar() {
       <MyNavLink to="/countertwo" className="nav-link">
         Counter 2
       </MyNavLink>
-      <MyNavLink to="/errorboundtest" className="nav-link">
+      {/* <MyNavLink to="/errorboundtest" className="nav-link">
         ErrorTest
-      </MyNavLink>
+      </MyNavLink> */}
     </nav>
   );
 }

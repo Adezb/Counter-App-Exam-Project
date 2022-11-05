@@ -16,7 +16,8 @@ const CounterTwo = () => {
       </Helmet>
 
       <div className="error-link">
-        Go to <Link to="/error">Error 404 Page</Link>
+        Explore <Link to="/error">404 Page</Link>{" "}
+        <Link to="/errorboundtest">Error Boundary</Link>
       </div>
 
       <div className="wrapper-two">
