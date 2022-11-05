@@ -32,13 +32,23 @@ const CounterOne = () => {
         </div>
 
         <div className="counter-btn-wrapper">
-          <button className="counter-one-btn" onClick={increment}>
+          <button
+            disabled={count >= 10}
+            arial-disabled={count >= 10}
+            className="counter-one-btn"
+            onClick={increment}
+          >
             Increment +
           </button>
           <button className="counter-one-btn" onClick={setValue}>
             Set Value
           </button>
-          <button className="counter-one-btn" onClick={decrement}>
+          <button
+            disabled={count <= -10}
+            arial-disabled={count <= -10}
+            className="counter-one-btn"
+            onClick={decrement}
+          >
             Decrement -
           </button>
         </div>

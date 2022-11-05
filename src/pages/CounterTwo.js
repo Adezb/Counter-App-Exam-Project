@@ -33,13 +33,23 @@ const CounterTwo = () => {
         </div>
 
         <div className="counter-btn-wrapper">
-          <button className="counter-two-btn" onClick={increment}>
+          <button
+            disabled={count >= 10}
+            arial-disabled={count >= 10}
+            className="counter-two-btn"
+            onClick={increment}
+          >
             Increment +
           </button>
           <button className="counter-two-btn" onClick={setValue}>
             Set Value
           </button>
-          <button className="counter-two-btn" onClick={decrement}>
+          <button
+            disabled={count <= -10}
+            arial-disabled={count <= -10}
+            className="counter-two-btn"
+            onClick={decrement}
+          >
             Decrement -
           </button>
         </div>
