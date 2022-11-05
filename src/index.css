@@ -49,7 +49,7 @@ body {
 }
 
 .app-description {
-  bottom: 30rem;
+  margin-bottom: 30rem;
 }
 
 .counter-title {
