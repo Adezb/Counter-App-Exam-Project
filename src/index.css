@@ -115,6 +115,7 @@ body {
 
 .error-link {
   text-align: center;
+  text-decoration: none;
 }
 
 .error-bound {
@@ -124,10 +125,6 @@ body {
 h2 {
   text-align: center;
   margin-top: 15rem;
-}
-
-Link {
-  text-decoration: none;
 }
 
 p {
