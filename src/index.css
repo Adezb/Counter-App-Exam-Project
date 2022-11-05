@@ -115,7 +115,7 @@ body {
 
 .error-link {
   display: flex;
-  justify-content: space-around;
+  margin-right: 10px;
   text-align: center;
 }
 
