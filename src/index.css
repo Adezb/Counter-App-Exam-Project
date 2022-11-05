@@ -48,12 +48,6 @@ body {
   border: 1px solid rgba(20, 41, 158, 0.35);
 }
 
-.app-description {
-  background: #92b4f3;
-  margin-top: 40px;
-  font-family: "Roboto", sans-serif;
-}
-
 .counter-title {
   display: flex;
   align-items: center;
