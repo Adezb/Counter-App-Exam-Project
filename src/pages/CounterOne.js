@@ -20,7 +20,6 @@ const CounterOne = () => {
         <Link to="/error" className="link">
           404-Page
         </Link>{" "}
-        ||
         <Link to="/errorboundtest" className="link">
           Error-Boundary
         </Link>
