@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const MyNavLink = ({ to, ...props }) => {
   let activeStyle = {
     textDecoration: "none",
-    color: "black",
+    color: "blue",
     backgroundColor: "white",
     transition: "all 2s",
   };
