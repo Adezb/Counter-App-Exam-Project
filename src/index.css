@@ -121,6 +121,7 @@ body {
 
 .link {
   text-decoration: none;
+  margin-left: 10px;
 }
 
 .error-bound {
