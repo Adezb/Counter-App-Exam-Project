@@ -14,6 +14,9 @@ function NavBar() {
   return (
     <nav className="nav-bar">
       <div className="app-name"> COUNTER 20</div>
+      <p className="app-description">
+        Counter 20 App counts in Positive + or Negative - ranging from 0 to 20.
+      </p>
       <MyNavLink to="/" className="nav-link">
         Counter 1
       </MyNavLink>

@@ -24,9 +24,6 @@ const CounterOne = () => {
           Error-Boundary
         </Link>
       </div>
-      <p className="app-description">
-        Counter 20 App counts in Positive + or Negative - ranging from 0 to 20.
-      </p>
       <div className="wrapper-one">
         <div className="counter-wrapper">
           <div className="counter-title">Counter One</div>
