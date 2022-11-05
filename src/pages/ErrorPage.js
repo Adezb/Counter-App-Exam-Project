@@ -9,7 +9,7 @@ const ErrorPage = () => {
         <title>Error 404</title>
         <meta name="description" content="This is an error page" />
       </Helmet>
-      <h2>404 Error</h2>
+      <h2>404 Page Not Found.</h2>
       <p>
         Go back to <Link to="/">Counter One</Link> or{" "}
         <Link to="/countertwo">Counter Two</Link>
