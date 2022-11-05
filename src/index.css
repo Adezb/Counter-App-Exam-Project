@@ -38,7 +38,7 @@ body {
 .counter-wrapper {
   display: block;
   position: absolute;
-  margin-bottom: 20rem;
+  margin-bottom: 25rem;
   font-family: "Roboto", sans-serif;
   width: 60vw;
   background: rgba(147, 174, 233, 0.21);
@@ -64,6 +64,12 @@ body {
   text-align: center;
   color: #fff;
   line-height: 0;
+}
+
+.range {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #0f57f3;
 }
 
 .counter-box {

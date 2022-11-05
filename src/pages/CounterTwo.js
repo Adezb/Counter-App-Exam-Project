@@ -27,7 +27,7 @@ const CounterTwo = () => {
         <div className="counter-wrapper">
           <div className="counter-title">Counter Two </div>
           <p className="counter-description">UseReducer Counter</p>
-
+          <div className="range">Count Range: 0 - 20</div>
           <div className="counter-box">{count}</div>
         </div>
 
