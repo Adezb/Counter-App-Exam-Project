@@ -7,10 +7,6 @@ import {
   ErrorBoundTest,
   ErrorPage,
 } from "./pages/index";
-// import CounterOne from "./pages/CounterOne";
-// import CounterTwo from "./pages/CounterTwo";
-// import ErrorPage from "./pages/ErrorPage";
-// import ErrorBoundTest from "./pages/ErrorBoundTest";
 import MyNavLink from "./customhook/MyNavLink";
 import Fallback from "./components/Fallback";
 import "./counterone.css";
@@ -26,9 +22,6 @@ function NavBar() {
       <MyNavLink to="/countertwo" className="nav-link">
         Counter 2
       </MyNavLink>
-      {/* <MyNavLink to="/errorboundtest" className="nav-link">
-        ErrorTest
-      </MyNavLink> */}
     </nav>
   );
 }
