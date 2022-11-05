@@ -11,11 +11,11 @@ const ErrorPage = () => {
       </Helmet>
       <h2>404 Page Not Found.</h2>
       <p>
-        Go back to{" "}
+        Go back to
         <Link to="/" className="link">
           Counter One
         </Link>{" "}
-        or{" "}
+        or
         <Link to="/countertwo" className="link">
           Counter Two
         </Link>
