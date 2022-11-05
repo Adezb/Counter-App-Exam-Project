@@ -14,8 +14,7 @@ const ErrorPage = () => {
         Go back to
         <Link to="/" className="link">
           Counter One
-        </Link>{" "}
-        or
+        </Link>
         <Link to="/countertwo" className="link">
           Counter Two
         </Link>
