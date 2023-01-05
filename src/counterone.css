@@ -8,9 +8,13 @@
 
 .counter-one-btn {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
   padding: 5px;
-  font-size: 16px;
+  min-width: 5rem;
+  font-weight: 500;
+  font-size: 18px;
   background: rgba(147, 174, 233, 0.21);
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -18,8 +22,7 @@
   -webkit-backdrop-filter: blur(10.5px);
   border: 1px solid rgba(20, 41, 158, 0.35);
   color: #fff;
-  /* border: none;
-  border-radius: 5px; */
+  /* border: none; */
   cursor: pointer;
   transition: 0.4s;
 }

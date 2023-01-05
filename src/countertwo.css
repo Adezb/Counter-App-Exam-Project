@@ -3,14 +3,22 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #92b4f3;
+  background: #1b7a9f;
+}
+
+.counter__two-highlight {
+  color: #fff !important;
 }
 
 .counter-two-btn {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
   padding: 5px;
-  font-size: 16px;
+  min-width: 5rem;
+  font-weight: 500;
+  font-size: 18px;
   background: rgba(147, 174, 233, 0.21);
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

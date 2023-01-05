@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 import {
@@ -13,8 +14,18 @@ import "./counterone.css";
 import "./countertwo.css";
 
 function NavBar() {
+  const [navBg, setNavBg] = useState("#92b4f3");
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/countertwo") {
+      setNavBg("#1b7a9f");
+    } else {
+      setNavBg("#92b4f3");
+    }
+  }, [location]);
   return (
-    <nav className="nav-bar">
+    <nav className="nav-bar" style={{ backgroundColor: navBg }}>
       <div className="app-name">COUNTER 20</div>
       <MyNavLink to="/" className="nav-link">
         Counter 1
@@ -30,6 +41,7 @@ function App() {
   const errorHandler = (error, errorInfo) => {
     console.log("Logging", error, errorInfo);
   };
+
   return (
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>

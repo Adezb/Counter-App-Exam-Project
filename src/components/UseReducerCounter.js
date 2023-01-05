@@ -7,8 +7,6 @@ function reducer(counter = 0, action) {
     return counter - 1;
   } else if (action.type === "reset") {
     return 0;
-  } else if (action.type === "setvalue") {
-    return Math.floor(Math.random() * 21);
   } else {
     return counter;
   }
@@ -29,11 +27,7 @@ const UseReducerCounter = () => {
     dispatch({ type: "reset" });
   };
 
-  const setValue = () => {
-    dispatch({ type: "setvalue" });
-  };
-
-  return { increment, decrement, reset, count, setValue };
+  return { increment, decrement, reset, count };
 };
 
 export default UseReducerCounter;

@@ -1,9 +1,14 @@
 import UseReducerCounter from "../components/UseReducerCounter";
+import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const CounterTwo = () => {
-  const { count, increment, decrement, setValue, reset } = UseReducerCounter(0);
+  const setvalueRef = useRef(null);
+  const { count, increment, decrement, reset } = UseReducerCounter(0);
+  const handleClick = () => {
+    setvalueRef(setvalueRef.current.value - `${count}`);
+  };
 
   return (
     <>
@@ -27,36 +32,44 @@ const CounterTwo = () => {
         <div className="counter-wrapper">
           <div className="counter-title">Counter Two </div>
           <p className="counter-description">UseReducer Counter</p>
-          <div className="range">Count Range: 0 - 20</div>
-          <div className="counter-box">{count}</div>
+          <div className="range" style={{ color: "#9cb7f3" }}>
+            Count Range: 0 - 20
+          </div>
+          <div className="counter-box counter__two-highlight">{count}</div>
         </div>
 
         <div className="counter-btn-wrapper">
           <button
             disabled={count >= 20}
-            arial-disabled={count >= 20}
-            className="counter-two-btn"
+            className="counter-two-btn operation-btn"
             onClick={increment}
           >
-            Increment +
+            +
           </button>
-          <button className="counter-two-btn" onClick={setValue}>
-            Set Value
-          </button>
-          <button
-            disabled={count <= -20}
-            arial-disabled={count <= -20}
-            className="counter-two-btn"
-            onClick={decrement}
-          >
-            Decrement -
-          </button>
-        </div>
+          {/* Reset Button  */}
 
-        <div className="reset-value">
           <button className="reset-btn" onClick={reset}>
             Reset
           </button>
+
+          <button
+            disabled={count <= 0}
+            className="counter-two-btn operation-btn"
+            onClick={decrement}
+          >
+            -
+          </button>
+        </div>
+        <div className="set__value">
+          <div className="input__value">
+            <input
+              ref={setvalueRef}
+              name="number"
+              type="number"
+              placeholder="0"
+            />
+          </div>
+          <button onClick={handleClick}>Set Value</button>
         </div>
       </div>
     </>

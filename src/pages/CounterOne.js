@@ -4,7 +4,8 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const CounterOne = () => {
-  const { count, increment, decrement, setValue, reset } = MyCounter(0);
+  const { count, increment, decrement, setValue, reset, inputRef } =
+    MyCounter(0);
 
   return (
     <>
@@ -35,29 +36,32 @@ const CounterOne = () => {
         <div className="counter-btn-wrapper">
           <button
             disabled={count >= 20}
-            arial-disabled={count >= 20}
-            className="counter-one-btn"
+            className="counter-one-btn operation-btn"
             onClick={increment}
           >
-            Increment +
+            +
           </button>
-          <button className="counter-one-btn" onClick={setValue}>
-            Set Value
-          </button>
-          <button
-            disabled={count <= -20}
-            arial-disabled={count <= -20}
-            className="counter-one-btn"
-            onClick={decrement}
-          >
-            Decrement -
-          </button>
-        </div>
 
-        <div className="reset-value">
+          {/* Reset Button  */}
+
           <button className="reset-btn" onClick={reset}>
             Reset
           </button>
+
+          <button
+            disabled={count <= 0}
+            className="counter-one-btn operation-btn"
+            onClick={decrement}
+          >
+            -
+          </button>
+        </div>
+
+        <div className="set__value">
+          <div className="input__value">
+            <input ref={inputRef} name="number" type="number" placeholder="0" />
+          </div>
+          <button onClick={setValue}>Set Value</button>
         </div>
       </div>
     </>
