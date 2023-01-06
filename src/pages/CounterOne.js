@@ -25,8 +25,8 @@ const CounterOne = () => {
           Error-Boundary
         </Link>
       </div>
-      <div className="wrapper-one">
-        <div className="counter-wrapper">
+      <div className="main__wrapper">
+        <div className="counter__wrapper">
           <div className="counter-title">Counter One</div>
           <p className="counter-description">Custom Hook Counter</p>
           <div className="range">Count Range: 0 - 20</div>
@@ -36,7 +36,7 @@ const CounterOne = () => {
         <div className="counter-btn-wrapper">
           <button
             disabled={count >= 20}
-            className="counter-one-btn operation-btn"
+            className="counter__btn operation-btn"
             onClick={increment}
           >
             +
@@ -50,16 +50,15 @@ const CounterOne = () => {
 
           <button
             disabled={count <= 0}
-            className="counter-one-btn operation-btn"
+            className="counter__btn operation-btn"
             onClick={decrement}
           >
             -
           </button>
         </div>
-
         <div className="set__value">
           <div className="input__value">
-            <input ref={inputRef} name="number" type="number" placeholder="0" />
+            <input ref={inputRef} name="number" type="text" placeholder="0" />
           </div>
           <button onClick={setValue}>Set Value</button>
         </div>

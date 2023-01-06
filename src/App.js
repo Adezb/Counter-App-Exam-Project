@@ -10,8 +10,6 @@ import {
 } from "./pages/index";
 import MyNavLink from "./customhook/MyNavLink";
 import Fallback from "./components/Fallback";
-import "./counterone.css";
-import "./countertwo.css";
 
 function NavBar() {
   const [navBg, setNavBg] = useState("#92b4f3");

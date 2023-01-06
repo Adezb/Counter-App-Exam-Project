@@ -1,14 +1,9 @@
 import UseReducerCounter from "../components/UseReducerCounter";
-import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const CounterTwo = () => {
-  const setvalueRef = useRef(null);
   const { count, increment, decrement, reset } = UseReducerCounter(0);
-  const handleClick = () => {
-    setvalueRef(setvalueRef.current.value - `${count}`);
-  };
 
   return (
     <>
@@ -28,8 +23,8 @@ const CounterTwo = () => {
           Error-Boundary
         </Link>
       </div>
-      <div className="wrapper-two">
-        <div className="counter-wrapper">
+      <div className="main__wrapper wrapper-two">
+        <div className="counter__wrapper">
           <div className="counter-title">Counter Two </div>
           <p className="counter-description">UseReducer Counter</p>
           <div className="range" style={{ color: "#9cb7f3" }}>
@@ -41,7 +36,7 @@ const CounterTwo = () => {
         <div className="counter-btn-wrapper">
           <button
             disabled={count >= 20}
-            className="counter-two-btn operation-btn"
+            className="counter__btn operation-btn"
             onClick={increment}
           >
             +
@@ -54,7 +49,7 @@ const CounterTwo = () => {
 
           <button
             disabled={count <= 0}
-            className="counter-two-btn operation-btn"
+            className="counter__btn operation-btn"
             onClick={decrement}
           >
             -
@@ -62,14 +57,9 @@ const CounterTwo = () => {
         </div>
         <div className="set__value">
           <div className="input__value">
-            <input
-              ref={setvalueRef}
-              name="number"
-              type="number"
-              placeholder="0"
-            />
+            <input name="number" type="text" placeholder="0" />
           </div>
-          <button onClick={handleClick}>Set Value</button>
+          <button>Set Value</button>
         </div>
       </div>
     </>

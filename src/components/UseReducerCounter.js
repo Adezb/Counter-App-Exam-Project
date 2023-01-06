@@ -15,6 +15,20 @@ function reducer(counter = 0, action) {
 const UseReducerCounter = () => {
   const [count, dispatch] = useReducer(reducer, 0);
 
+  // const [inputValues, setInputValues] = useReducer(
+  //   (state, newState) => ({ ...state, ...newState }),
+  //   { count: "" }
+  // );
+
+  // const handleOnChange = (event) => {
+  //   const { value } = event.target.value;
+  //   setInputValues(value);
+  // };
+
+  // const handleClick = () => {
+  //   setInputValues();
+  // };
+
   const increment = () => {
     dispatch({ type: "increment" });
   };
@@ -27,7 +41,12 @@ const UseReducerCounter = () => {
     dispatch({ type: "reset" });
   };
 
-  return { increment, decrement, reset, count };
+  return {
+    increment,
+    decrement,
+    reset,
+    count,
+  };
 };
 
 export default UseReducerCounter;
