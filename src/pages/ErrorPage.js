@@ -2,6 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
+import { images } from "../constants";
+
 const ErrorPage = () => {
   return (
     <div className="error-page">
@@ -9,14 +11,14 @@ const ErrorPage = () => {
         <title>Error 404</title>
         <meta name="description" content="This is an error page" />
       </Helmet>
-      <h2>404 Page Not Found.</h2>
+      <h2>
+        <img src={images.error404} alt="error-404" />
+        <p className="error__description"> This page does not exist.</p>
+      </h2>
       <p>
         Go back to
         <Link to="/" className="link">
-          Counter One
-        </Link>
-        <Link to="/countertwo" className="link">
-          Counter Two
+          Home
         </Link>
       </p>
     </div>

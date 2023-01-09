@@ -1,13 +1,9 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
-import {
-  CounterOne,
-  CounterTwo,
-  ErrorBoundTest,
-  ErrorPage,
-} from "./pages/index";
+import { CounterOne, ErrorBoundTest, ErrorPage } from "./pages/index";
+import UseReducerCounter from "./components/UseReducerCounter";
 import MyNavLink from "./customhook/MyNavLink";
 import Fallback from "./components/Fallback";
 
@@ -24,7 +20,11 @@ function NavBar() {
   }, [location]);
   return (
     <nav className="nav-bar" style={{ backgroundColor: navBg }}>
-      <div className="app-name">COUNTER 20</div>
+      <div className="app__name">
+        <Link to="/" className="app__name-link">
+          COUNTER 20
+        </Link>
+      </div>
       <MyNavLink to="/" className="nav-link">
         Counter 1
       </MyNavLink>
@@ -46,7 +46,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<CounterOne />} />
-          <Route path="/countertwo" element={<CounterTwo />} />
+          <Route path="/countertwo" element={<UseReducerCounter />} />
           <Route path="/errorboundtest" element={<ErrorBoundTest />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
