@@ -8,14 +8,14 @@ import MyNavLink from "./customhook/MyNavLink";
 import Fallback from "./components/Fallback";
 
 function NavBar() {
-  const [navBg, setNavBg] = useState("#92b4f3");
+  const [navBg, setNavBg] = useState("#0170b1");
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname === "/countertwo") {
-      setNavBg("#1b6bc1");
+      setNavBg("#00b4d8");
     } else {
-      setNavBg("#92b4f3");
+      setNavBg("#0170b1");
     }
   }, [location]);
   return (
