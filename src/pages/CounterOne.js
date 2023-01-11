@@ -6,18 +6,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRefresh } from "@fortawesome/free-solid-svg-icons";
 
 const CounterOne = () => {
-  const [countlimit, setCountlimit] = useState(false);
+  const [countlimit, setCountLimit] = useState(false);
+  // const [valuelimit, setValueLimit] = useState(false);
 
-  const { count, increment, decrement, setValue, reset, inputRef } =
-    MyCounter(0);
+  const {
+    count,
+    increment,
+    decrement,
+    setValue,
+    reset,
+    handleOnChange,
+    inputvalue,
+  } = MyCounter(0);
 
   useEffect(() => {
     if (count === 20) {
-      setCountlimit(true);
+      setCountLimit(true);
     } else {
       return;
     }
-  }, [count]);
+  }, [count, inputvalue]);
 
   return (
     <>
@@ -56,6 +64,7 @@ const CounterOne = () => {
         <div className="counter-btn-wrapper">
           <button
             disabled={count <= 0}
+            aria-disabled={count <= 0}
             className="counter__btn operation-btn"
             onClick={decrement}
           >
@@ -70,6 +79,7 @@ const CounterOne = () => {
 
           <button
             disabled={count === 20}
+            aria-disabled={count === 20}
             className="counter__btn operation-btn"
             onClick={increment}
           >
@@ -78,9 +88,21 @@ const CounterOne = () => {
         </div>
         <div className="set__value">
           <div className="input__value">
-            <input ref={inputRef} name="number" type="text" placeholder="0" />
+            <input
+              onChange={handleOnChange}
+              value={inputvalue}
+              name="number"
+              type="text"
+              placeholder="0"
+            />
           </div>
-          <button onClick={setValue}>Set Value</button>
+          <button
+            disabled={inputvalue >= 20}
+            aria-disabled={inputvalue >= 20}
+            onClick={setValue}
+          >
+            Set Value
+          </button>
         </div>
       </div>
     </>

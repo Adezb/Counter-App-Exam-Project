@@ -98,6 +98,7 @@ export default function UseReducerCounter() {
         <div className="counter-btn-wrapper">
           <button
             disabled={state.counter <= 0}
+            aria-disabled={state.counter <= 0}
             className="counter__btn operation-btn"
             onClick={decrement}
           >
@@ -111,6 +112,7 @@ export default function UseReducerCounter() {
 
           <button
             disabled={state.counter === 20}
+            aria-disabled={state.counter === 20}
             className="counter__btn operation-btn"
             onClick={increment}
           >
@@ -127,7 +129,13 @@ export default function UseReducerCounter() {
               placeholder="0"
             />
           </div>
-          <button onClick={handleClick}>Set Value</button>
+          <button
+            disabled={state.input >= 20}
+            aria-disabled={state.input >= 20}
+            onClick={handleClick}
+          >
+            Set Value
+          </button>
         </div>
       </div>
     </>
