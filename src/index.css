@@ -171,7 +171,8 @@ body {
 .counter__wrapper .range {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  color: #0f57f3;
+  font-weight: 600;
+  color: #0f5720;
 }
 
 .counter__wrapper .counter-box {
@@ -261,10 +262,19 @@ body {
   transition: 0.4s;
 }
 
+.reset-btn .reset__icon {
+  text-align: center;
+  color: #03092e;
+}
+
 .reset-btn:hover {
   background: #0f57f3;
   color: rgb(255, 255, 255);
   transform: scale(1.1);
+}
+
+.reset__icon:hover {
+  color: #fff;
 }
 
 @media screen and (max-width: 350px) {

@@ -1,6 +1,8 @@
-import { useReducer } from "react";
+import { useReducer, useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRefresh } from "@fortawesome/free-solid-svg-icons";
 
 const defaultState = { counter: 0, input: "" };
 
@@ -22,6 +24,8 @@ const reducer = (state = { name: "" }, action) => {
 };
 
 export default function UseReducerCounter() {
+  const [countlimit, setCountlimit] = useState(false);
+
   const [state, dispatch] = useReducer(reducer, defaultState);
 
   const handleClick = () => {
@@ -47,6 +51,14 @@ export default function UseReducerCounter() {
     dispatch({ type: "setvalue", payload: e.target.value });
   };
 
+  useEffect(() => {
+    if (state.counter === 20) {
+      setCountlimit(true);
+    } else {
+      return;
+    }
+  }, [state.counter]);
+
   return (
     <>
       <Helmet>
@@ -69,8 +81,14 @@ export default function UseReducerCounter() {
         <div className="counter__wrapper">
           <div className="counter-title">Counter Two </div>
           <p className="counter-description">UseReducer Counter</p>
-          <div className="range" style={{ color: "#9cb7f3" }}>
-            Count Range: 0 - 20
+          <div className="range">
+            {countlimit && state.counter === 20 ? (
+              <div style={{ color: "red", fontWeight: "bolder" }}>
+                Count Limit Reached!
+              </div>
+            ) : (
+              "Count Limit: 20"
+            )}
           </div>
           <div className="counter-box counter__two-highlight">
             {state.counter}
@@ -79,24 +97,24 @@ export default function UseReducerCounter() {
 
         <div className="counter-btn-wrapper">
           <button
-            disabled={state.counter >= 20}
-            className="counter__btn operation-btn"
-            onClick={increment}
-          >
-            +
-          </button>
-          {/* Reset Button  */}
-
-          <button className="reset-btn" onClick={reset}>
-            Reset
-          </button>
-
-          <button
             disabled={state.counter <= 0}
             className="counter__btn operation-btn"
             onClick={decrement}
           >
             -
+          </button>
+          {/* Reset Button  */}
+
+          <button className="reset-btn" onClick={reset}>
+            <FontAwesomeIcon className="reset__icon" icon={faRefresh} />
+          </button>
+
+          <button
+            disabled={state.counter === 20}
+            className="counter__btn operation-btn"
+            onClick={increment}
+          >
+            +
           </button>
         </div>
         <div className="set__value">
