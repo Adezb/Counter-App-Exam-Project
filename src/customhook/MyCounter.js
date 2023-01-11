@@ -1,8 +1,8 @@
 import { useState, useRef } from "react";
 
 export default function MyCounter(defaultValue) {
-  const inputRef = useRef(null);
   const [count, setCount] = useState(defaultValue || 0);
+  const inputRef = useRef(null);
 
   const increment = () => setCount((countValue) => countValue + 1);
   const decrement = () => setCount((countValue) => countValue - 1);

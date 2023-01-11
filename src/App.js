@@ -13,7 +13,7 @@ function NavBar() {
 
   useEffect(() => {
     if (location.pathname === "/countertwo") {
-      setNavBg("#1b7a9f");
+      setNavBg("#1b6bc1");
     } else {
       setNavBg("#92b4f3");
     }

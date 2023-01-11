@@ -12,22 +12,39 @@ body {
 .nav-bar {
   display: flex;
   justify-content: center;
-  background-color: #92b4f3;
   padding: 8px 0 8px 8px;
   min-width: 50vw;
   font-size: 20px;
 }
 
 .app__name {
-  margin-top: 15px 0 15px 15px;
-  padding: 14px 8px 8px 8px;
+  margin-top: 20px 0 20px 20px;
+  padding: 14px 7px 7px 7px;
   text-align: center;
-  background: #fff;
+  background-image: linear-gradient(
+    -225deg,
+    #86e5ff 10%,
+    #f7f5eb 50%,
+    #1b7a9f 70%,
+    #0081c9 100%
+  );
+  -webkit-text-fill-color: transparent;
   border-radius: 3px;
-  color: #92b4f3;
-  font-weight: bold;
+  color: #fff;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  font-weight: bolder;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  animation: appname 2s linear infinite;
+}
+
+@keyframes appname {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .app__name .app__name-link {
@@ -39,6 +56,7 @@ body {
   .app__name {
     font-size: 16px;
     min-width: 10vw;
+    padding: 14px 7px 7px 7px;
   }
 }
 
@@ -71,11 +89,17 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #92b4f3;
+  /* background: #92b4f3; */
+  background-image: url(./assets/animesky.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
 }
 
 .wrapper-two {
-  background: #1b7a9f !important;
+  /* background: #1b6bc1 !important; */
+  background-image: url(./assets/amwb.gif) !important;
 }
 
 .counter__wrapper {
