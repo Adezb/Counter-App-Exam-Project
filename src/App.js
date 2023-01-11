@@ -2,8 +2,12 @@ import { Routes, Route, useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
-import { CounterOne, ErrorBoundTest, ErrorPage } from "./pages/index";
-import UseReducerCounter from "./components/UseReducerCounter";
+import {
+  CounterOne,
+  ErrorBoundTest,
+  ErrorPage,
+  UseReducerCounter,
+} from "./pages/index";
 import MyNavLink from "./customhook/MyNavLink";
 import Fallback from "./components/Fallback";
 

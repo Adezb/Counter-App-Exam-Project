@@ -25,6 +25,7 @@ const reducer = (state = { name: "" }, action) => {
 
 export default function UseReducerCounter() {
   const [countlimit, setCountlimit] = useState(false);
+  const [valuelimit, setValueLimit] = useState(false);
 
   const [state, dispatch] = useReducer(reducer, defaultState);
 
@@ -54,10 +55,12 @@ export default function UseReducerCounter() {
   useEffect(() => {
     if (state.counter === 20) {
       setCountlimit(true);
+    } else if (state.input >= 20) {
+      setValueLimit(true);
     } else {
       return;
     }
-  }, [state.counter]);
+  }, [state.counter, state.input]);
 
   return (
     <>
@@ -134,7 +137,13 @@ export default function UseReducerCounter() {
             aria-disabled={state.input >= 20}
             onClick={handleClick}
           >
-            Set Value
+            {valuelimit && state.input >= 20 ? (
+              <div style={{ color: "red", fontWeight: "bolder" }}>
+                Limit Reached!
+              </div>
+            ) : (
+              "Set Value"
+            )}
           </button>
         </div>
       </div>

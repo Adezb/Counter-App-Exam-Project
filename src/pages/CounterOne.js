@@ -7,7 +7,7 @@ import { faRefresh } from "@fortawesome/free-solid-svg-icons";
 
 const CounterOne = () => {
   const [countlimit, setCountLimit] = useState(false);
-  // const [valuelimit, setValueLimit] = useState(false);
+  const [valuelimit, setValueLimit] = useState(false);
 
   const {
     count,
@@ -22,6 +22,8 @@ const CounterOne = () => {
   useEffect(() => {
     if (count === 20) {
       setCountLimit(true);
+    } else if (inputvalue >= 20) {
+      setValueLimit(true);
     } else {
       return;
     }
@@ -101,7 +103,13 @@ const CounterOne = () => {
             aria-disabled={inputvalue >= 20}
             onClick={setValue}
           >
-            Set Value
+            {valuelimit && inputvalue >= 20 ? (
+              <div style={{ color: "red", fontWeight: "bolder" }}>
+                Limit Reached!
+              </div>
+            ) : (
+              " Set Value"
+            )}
           </button>
         </div>
       </div>
